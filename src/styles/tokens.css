@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Design tokens — Cohen & Cohen Personal Injury Lawyers, P.C.
+   Palette taken from the firm's theme CSS (--primary-color / --secondary-color)
+   and logo. Only tints/shades of these brand colours are used.
+   ========================================================================== */
+:root {
+  /* Brand */
+  --royal: #124081;      /* --primary-color */
+  --royal-700: #0d3166;  /* pressed / hover shade of royal */
+  --gold: #f7b731;       /* --secondary-color */
+  --gold-600: #e9a516;   /* hover shade of gold */
+  --navy: #112337;       /* deep navy — contrast colour */
+  --midnight: #071a34;   /* top bar / footer */
+  --light: #f5f5f5;
+  --light-2: #f2f2f2;
+  --slate: #585e6a;
+  --slate-2: #686e77;
+  --white: #ffffff;
+
+  /* Text */
+  --ink: var(--navy);
+  --ink-2: var(--slate);
+  --on-dark: #ffffff;
+  --on-dark-2: rgba(255, 255, 255, 0.78);
+  --on-dark-3: rgba(255, 255, 255, 0.56);
+
+  /* Lines */
+  --line: rgba(17, 35, 55, 0.12);
+  --line-2: rgba(17, 35, 55, 0.2);
+  --line-dark: rgba(255, 255, 255, 0.12);
+  --line-dark-2: rgba(255, 255, 255, 0.22);
+
+  /* Type — Balboa / Aktiv Grotesk on the live site (Typekit). Free stand-ins:
+     swap these two variables for the firm's Typekit families when licensed. */
+  --font-display: 'Barlow Condensed', 'Balboa', 'Oswald', 'Arial Narrow', sans-serif;
+  --font-sans: 'Barlow', 'Aktiv Grotesk', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --fs-micro: 0.75rem;
+  --fs-small: 0.875rem;
+  --fs-body: 1.0625rem;
+  --fs-lede: clamp(1.0625rem, 0.98rem + 0.4vw, 1.3rem);
+  --fs-h4: clamp(1.35rem, 1.15rem + 0.6vw, 1.75rem);
+  --fs-h3: clamp(1.75rem, 1.3rem + 1.4vw, 2.6rem);
+  --fs-h2: clamp(2.6rem, 1.6rem + 3.8vw, 5.25rem);
+  --fs-display: clamp(3rem, 1.4rem + 6.2vw, 7.4rem);
+
+  /* Space */
+  --gutter: clamp(16px, 4vw, 48px);
+  --shell: 1280px;
+  --section: clamp(80px, 10vw, 144px);
+  --radius: 2px;
+  --radius-m: 6px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --topbar-h: 38px;
+  --header-row: 84px;
+  --nav-row: 52px;
+  --header-h: calc(var(--header-row) + var(--nav-row));
+  --sticky-top: var(--header-h);
+}
+@media (max-width: 1199px) { :root { --header-row: 72px; --nav-row: 0px; } }
